@@ -1,6 +1,6 @@
 Name:    haproxy_exporter
 Version: 0.13.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: haproxy_exporter
 
 License: Apache-2.0 license

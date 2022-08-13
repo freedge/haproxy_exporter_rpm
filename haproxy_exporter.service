@@ -1,4 +1,15 @@
+[Unit]
+Description=Haproxy exporter
+After=network-online.target
+
 [Service]
-ExecStart=/usr/bin/haproxy_exporter @/var/lib/haproxy_exporter/args
+Environment=ARGS="@/var/lib/haproxy_exporter/args"
+EnvironmentFile=-/etc/sysconfig/haproxy_exporter
+ExecStart=/usr/bin/haproxy_exporter $ARGS
 DynamicUser=yes
 StateDirectory=haproxy_exporter
+MemoryMax=1G
+
+[Install]
+WantedBy=multi-user.target
+
