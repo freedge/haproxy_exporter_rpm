@@ -7,6 +7,8 @@ License: Apache-2.0 license
 Source0: https://github.com/prometheus/haproxy_exporter/releases/download/v%{version}/haproxy_exporter-%{version}.linux-amd64.tar.gz
 Source1: haproxy_exporter.service
 
+BuildRequires: tar
+
 %description
 haproxy_exporter
 
